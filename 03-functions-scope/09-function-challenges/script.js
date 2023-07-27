@@ -1,31 +1,20 @@
 // Challenge 1
-// function getCelsius(f) {
-//   const celsius = ((f - 32) * 5) / 9;
-//   return celsius;
-// }
-
-const getCelsius = (f) => ((f - 32) * 5) / 9;
-
-console.log(`The temp is ${getCelsius(35)} \xB0C `);
+const getCelsius = f => (f - 32) * 5 / 9;
+console.log(`The temperature is ${Math.round(getCelsius(32))} \xB0C`);
 
 // Challenge 2
-function minMax(arr) {
-  const min = Math.min(...arr);
-  const max = Math.max(...arr);
-
+const minMax = nums => {
+  let min = Math.min(...nums);
+  let max = Math.max(...nums);
   return {
     min,
     max,
-  };
+  }
 }
-
-console.log(minMax([2, 31, 4, 5, 6]));
+console.log(minMax([100,2,-3,4,5]));
 
 // Challenge 3
-((length, width) => {
-  const area = length * width;
-
-  const output = `The area of a rectangle with a length of ${length} and a width of ${width} is ${area}.`;
-
-  console.log(output);
-})(20, 10);
+((l, w) => {
+  const area = l * w;
+  console.log(`The area of a rectangle with a length of ${l} and a width of ${w} is ${area}.`);
+})(5, 10);
